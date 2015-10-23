@@ -1,0 +1,132 @@
+﻿@backgroundimgS:contain;
+@backgroundimgWrapper:cover;
+
+body {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+body * {
+    font-family: 'Microsoft YaHei';
+}
+
+#wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.tipForSwapUp {
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    bottom: 0.31em;
+    z-index: 999;
+	/*border:1px solid blue;*/
+	-webkit-transform-style: preserve-3d;
+}
+
+.arrowItemContainer {
+    position: relative;
+    height: 80%;
+    width: 10%;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
+	animation: aArrowItem 3.4s linear infinite;
+	animation-direction:normal;
+}
+
+.arrowItem {
+    width: 1em;
+    height: 1em;
+    border-right: 2px solid white;
+    border-top: 2px solid white;
+    transform: rotate(-45deg);
+    margin: 0 auto;
+
+}
+
+@keyframes aArrowItem {
+    0%,30% {
+		transform: translate(0, 0);
+    }
+
+    100% {
+		opacity:0;
+		transform: translate(0, -4em);
+    }
+}
+
+.myImages {
+    background:url(../../Content/images/home.png);
+    /*background-size:cover;*/
+    height:4.5em;
+    width:9em;
+    background-position:-1em -4.5em;
+    border:1px solid red;
+    background-size: 190% 200%;
+}
+
+.myImages1 {
+    background:url(../../Content/images/home.png);
+    height:4.5em;
+    width:9em;
+    background-position:-16px -72px;
+    border:1px solid red;
+}
+
+
+/**页面1**/
+.sec1 {
+    background: url(../images/1/1.jpg) 0 0 no-repeat;
+    background-size: cover;
+    transition: width 1s ease;
+}
+.sec3 {
+    background: url(../images/3/1.jpg) 0 0 no-repeat;
+    background-size: cover;
+    transition: width 1s ease;
+}
+
+
+
+/*************响应式处理****************/
+
+@media screen and (min-width:750px) {
+    #wrapper {
+        width: 480px;
+        height: 100%;
+    }
+
+    .footer {
+        width: 480px;
+        height: 210px;
+    }
+
+}
+
+@media screen and (max-width:420px) {
+  
+
+}
+
+@media screen and (max-width:320px) {
+
+    
+}
+
+/*@media screen and (min-width:320px) and (min-height:480px) {
+    .gameResultPanel {
+        height: 56%;
+        width: 85%;
+    }
+}*/
