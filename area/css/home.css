@@ -12,9 +12,18 @@ body {
     overflow: hidden;
 }
 
-body * {
-    font-family: 'Microsoft YaHei';
+    body * {
+        font-family: 'Microsoft YaHei';
+    }
+
+ul {
+    margin: 0;
+    padding: 0;
 }
+
+    ul li {
+        list-style: none;
+    }
 
 #wrapper {
     position: absolute;
@@ -30,8 +39,8 @@ body * {
     width: 100%;
     bottom: 0.31em;
     z-index: 999;
-	/*border:1px solid blue;*/
-	-webkit-transform-style: preserve-3d;
+    /*border:1px solid blue;*/
+    -webkit-transform-style: preserve-3d;
 }
 
 .arrowItemContainer {
@@ -41,8 +50,8 @@ body * {
     margin: 0 auto;
     top: 50%;
     transform: translateY(-50%);
-	animation: aArrowItem 3.4s linear infinite;
-	animation-direction:normal;
+    animation: aArrowItem 3.4s linear infinite;
+    animation-direction: normal;
 }
 
 .arrowItem {
@@ -52,38 +61,18 @@ body * {
     border-top: 2px solid white;
     transform: rotate(-45deg);
     margin: 0 auto;
-
 }
 
 @keyframes aArrowItem {
     0%,30% {
-		transform: translate(0, 0);
+        transform: translate(0, 0);
     }
 
     100% {
-		opacity:0;
-		transform: translate(0, -4em);
+        opacity: 0;
+        transform: translate(0, -4em);
     }
 }
-
-.myImages {
-    background:url(../../Content/images/home.png);
-    /*background-size:cover;*/
-    height:4.5em;
-    width:9em;
-    background-position:-1em -4.5em;
-    border:1px solid red;
-    background-size: 190% 200%;
-}
-
-.myImages1 {
-    background:url(../../Content/images/home.png);
-    height:4.5em;
-    width:9em;
-    background-position:-16px -72px;
-    border:1px solid red;
-}
-
 
 /**页面1**/
 .sec1 {
@@ -91,6 +80,87 @@ body * {
     background-size: cover;
     transition: width 1s ease;
 }
+
+/**页面2**/
+.sec2 {
+    background: url(../images/2/1.jpg) 0 0 no-repeat;
+    background-size: cover;
+    transition: width 1s ease;
+}
+
+.poetryWords {
+    width: 60%;
+    margin: 7% auto;
+}
+
+    .poetryWords ul li {
+        height: 1.25em;
+        margin: 0.41em auto;
+        opacity:0;
+    }
+
+        .poetryWords ul li:nth-child(1) {
+            width:90%;
+            background: url(../images/2/3.png) 0 0 no-repeat;
+            background-size: contain;
+            transition: width 1s ease;
+        }
+
+        .poetryWords ul li:nth-child(2) {
+            width:95%;
+            background: url(../images/2/4.png) 0 0 no-repeat;
+            background-size: contain;
+            transition: width 1s ease;
+        }
+
+        .poetryWords ul li:nth-child(3) {
+             width:95%;
+            background: url(../images/2/5.png) 0 0 no-repeat;
+            background-size: contain;
+            transition: width 1s ease;
+        }
+
+        .poetryWords ul li:nth-child(4) {
+            width:96%;
+            background: url(../images/2/6.png) 0 0 no-repeat;
+            background-size: contain;
+            transition: width 1s ease;
+        }
+
+.poetryWordsLiShow{
+     animation: aPoetryWordsLiShow 1.4s linear;
+     animation-fill-mode:forwards;
+}
+@keyframes aPoetryWordsLiShow {
+    100% {
+        opacity:1;
+    }
+}
+
+.burner {
+    position:absolute;
+    background: url(../images/2/2.png) 0 0 no-repeat;
+    background-size: contain;
+    transition: width 1s ease;
+    height:3em;
+    width:3em;
+    top:25%;
+    left:32%;
+    animation: aBurner 1.4s linear infinite;
+    animation-direction:alternate;
+    opacity:0.8;
+}
+@keyframes aBurner {
+    0% {
+        transform:scale(0.8);
+    }
+    100% {
+        transform:scale(2);
+        opacity: 1;
+    }
+}
+
+/**第三页**/
 .sec3 {
     background: url(../images/3/1.jpg) 0 0 no-repeat;
     background-size: cover;
@@ -98,6 +168,55 @@ body * {
 }
 
 
+/**第四页**/
+.sec4 {
+    background: url(../images/4/1.jpg) 0 0 no-repeat;
+    background-size: cover;
+    transition: width 1s ease;
+}
+
+/**第五页**/
+.sec5 {
+    background: url(../images/5/1.jpg) 0 0 no-repeat;
+    background-size: cover;
+    transition: width 1s ease;
+}
+
+/**第六页**/
+.sec6 {
+    background: url(../images/6/1.jpg) 0 0 no-repeat;
+    background-size: cover;
+    transition: width 1s ease;
+}
+
+.sec7 {
+    background: url(../images/7/1.jpg) 0 0 no-repeat;
+    background-size: cover;
+    transition: width 1s ease;
+}
+
+.sec8 {
+    background: url(../images/8/1.jpg) 0 0 no-repeat;
+    background-size: cover;
+    transition: width 1s ease;
+}
+
+.sec9 {
+    background: url(../images/9/1.jpg) 0 0 no-repeat;
+    background-size: cover;
+    transition: width 1s ease;
+}
+
+.sec10 {
+    background: url(../images/10/1.jpg) 0 0 no-repeat;
+    background-size: cover;
+    transition: width 1s ease;
+}
+.sec11 {
+    background: url(../images/11/1.jpg) 0 0 no-repeat;
+    background-size: cover;
+    transition: width 1s ease;
+}
 
 /*************响应式处理****************/
 
@@ -105,23 +224,29 @@ body * {
     #wrapper {
         width: 480px;
         height: 100%;
+        position: relative;
+        margin: 0 auto;
+        overflow: hidden;
     }
 
+     .poetryWords ul li {
+        height: 2.25em;
+    }
+
+    .burner {
+        top: 28%;
+        left: 32%;
+    }
     .footer {
         width: 480px;
         height: 210px;
     }
-
 }
 
 @media screen and (max-width:420px) {
-  
-
 }
 
 @media screen and (max-width:320px) {
-
-    
 }
 
 /*@media screen and (min-width:320px) and (min-height:480px) {
