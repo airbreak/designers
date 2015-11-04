@@ -166,7 +166,39 @@ ul {
     background-size: cover;
     transition: width 1s ease;
 }
-
+.sec3Word {
+    background: url(../images/3/2.png) 0 0 no-repeat;
+    background-size: cover;
+    transition: width 1s ease;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
+.sec3Burner {
+    background: url(../images/3/1.png) 0 0 no-repeat;
+    background-size: cover;
+    transition: width 1s ease;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    
+}
+.aSec3BurnerShow {
+    animation: aSec3Burner 1.4s linear infinite;
+    animation-direction:alternate;   
+}
+@keyframes aSec3Burner {
+    0% {
+        opacity:0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
 /**第四页**/
 .sec4 {

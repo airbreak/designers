@@ -62,7 +62,10 @@ $(function () {
                 }
             }, 1000);
     }
-    function pageSlider3() { }
+    function pageSlider3() {
+        var $sec3 = $('.sec3');
+        $sec3.find('.sec3Burner').addClass('aSec3BurnerShow');
+    }
     function pageSlider4() { }
     function pageSlider5() { }
     function pageSlider6() { }
